@@ -6,19 +6,21 @@ export ZSH="$HOME/.oh-my-zsh"
 
 
 # AUTO COMPLETIONS
+source /Users/al02266531/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # https://www.spreered.com/bootstrap_iterm_zsh/
 # case-insensitive (all), partial-word and then substring completion
 
 #autoload -Uz compinit && compinit
 #zstyle ':completion:*' matcher-list 'm:{a-za-z}={a-za-z}' \
- #   'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+#    'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 #zstyle ':completion:*' menu yes select
 
 #if type brew &>/dev/null; then
- # fpath=$(brew --prefix)/share/zsh/site-functions:$fpath
+#  fpath=$(brew --prefix)/share/zsh/site-functions:$fpath
 
-  #autoload -uz compinit
-  #compinit
+#  autoload -uz compinit
+#  compinit
 #fi
 
 # Set name of the theme to load --- if set to "random", it will
@@ -125,7 +127,7 @@ source $ZSH/oh-my-zsh.sh
 alias i="code-insiders"
 alias c="cd ~/Desktop/myCode"
 alias ls="colorls"
-
+alias neofetch="neowofetch"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #if command -v pyenv 1>/dev/null 2>&1; then
@@ -142,3 +144,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 # fnm
 export PATH="/Users/al02266531/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
