@@ -42,6 +42,7 @@ ZSH_THEME="steeef"
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
+bindkey -M menuselect '^M' .accept-line
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -144,6 +145,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 # fnm
 export PATH="/Users/al02266531/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
-# jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
