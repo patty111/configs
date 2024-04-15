@@ -17,3 +17,7 @@ sass            1.71.1  main   2024-03-04 21:44:13
 ttyper          1.4.0   main   2024-01-29 14:28:29  
 unrar           6.24    main   2024-02-10 16:45:46  
 ```
+
+## MacOS
+#### HomeBrew Packages
+
