@@ -4,10 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-
-# AUTO COMPLETIONS
-source /Users/al02266531/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # https://www.spreered.com/bootstrap_iterm_zsh/
 # case-insensitive (all), partial-word and then substring completion
 
@@ -141,9 +137,15 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 
+# Auto Completion
+# need to source after sourcing oh-my-zsh.sh, else the command line history will malfunction
+source /Users/al02266531/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # fnm
 export PATH="/Users/al02266531/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# thefuck
+eval $(thefuck --alias)
