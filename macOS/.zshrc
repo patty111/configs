@@ -38,7 +38,7 @@ ZSH_THEME="steeef"
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
-bindkey -M menuselect '^M' .accept-line
+
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -91,6 +91,8 @@ plugins=(
 	git 
 	z
 	zsh-autosuggestions
+    command-not-found   # run brew tap homebrew/command-not-found to enable
+    you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -138,7 +140,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Auto Completion
-# need to source after sourcing oh-my-zsh.sh, else the command line history will malfunction
+# need ti siyrce after sourcing oh-my-zsh.sh, else the command line history will malfunction
 source /Users/al02266531/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # fnm
@@ -149,3 +151,6 @@ eval "$(jenv init -)"
 
 # thefuck
 eval $(thefuck --alias)
+
+# enter will directly select the history command instead of leaving a space
+bindkey -M menuselect '^M' .accept-line

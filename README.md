@@ -20,4 +20,11 @@ unrar           6.24    main   2024-02-10 16:45:46
 
 ## MacOS
 #### HomeBrew Packages
+listed in the Brewfile using `brew bundle dump`  
+  
+to install the packages from the bundle file run
+```shell
+brew bundle install
+```
+
 
