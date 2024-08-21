@@ -1,0 +1,28 @@
+[user]
+	email = smefyb@gmail.com
+	name = patty111
+
+[alias]
+	nah = "!f() { git reset --hard; git clean -df; if [ -d \".git/rebase-apply\" ] || [ -d \".git/rebase-merge\" ]; then git rebase --abort; fi; }; f"
+	ac = '!f() { git add . && git commit -m "$1"; }; f'
+[core ""]
+	excludesfile = /Users/lxn/.gitignore
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RF
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
