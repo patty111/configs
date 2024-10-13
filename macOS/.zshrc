@@ -128,6 +128,10 @@ alias c="cd ~/Desktop/myCode"
 alias ls="colorls"
 alias neofetch="neowofetch"
 
+# ALIAS for docker/podman images
+alias start-rabbit="podman run -it --rm --name MyRabbit -p 5672:5672 -p 15672:15672 rabbitmq:management"
+alias start-redis="podman run -ti --rm -p 6379:6379 redis"
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #if command -v pyenv 1>/dev/null 2>&1; then
  # eval "$(pyenv init -)"
@@ -135,13 +139,12 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 # adding this in profile only, else slowing down shell startup
-#eval "$(pyenv init -)"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 
 # Auto Completion
 # need ti siyrce after sourcing oh-my-zsh.sh, else the command line history will malfunction
-source /Users/al02266531/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /Users/LXN/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # fnm
 export PATH="/Users/al02266531/Library/Application Support/fnm:$PATH"
@@ -154,3 +157,12 @@ eval $(thefuck --alias)
 
 # enter will directly select the history command instead of leaving a space
 bindkey -M menuselect '^M' .accept-line
+export PATH="/Users/lxn/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/lxn/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
